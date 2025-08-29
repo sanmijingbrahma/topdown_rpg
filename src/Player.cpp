@@ -1,4 +1,5 @@
 #include "Player.hpp"
+#include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Window/Keyboard.hpp>
@@ -51,6 +52,14 @@ void Player::handleInput(float deltaTime){
 
     }
 
+}
+
+void Player::collisionDetect(sf::FloatRect something){
+    sf::FloatRect playerBound = sprite.getGlobalBounds();
+
+    if(playerBound.intersects(something)){
+        std::cout<<"Collision!"<<std::endl;
+    }
 }
 
 

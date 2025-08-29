@@ -6,6 +6,7 @@ class Player{
     public:
         Player(const std::string& texturePath,sf::Vector2f& spawnPos);
         void handleInput(float deltaTime);
+        void collisionDetect(sf::FloatRect something);
         void draw(sf::RenderWindow& window);
 
     private:
